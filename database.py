@@ -17,9 +17,9 @@ def connect_db():
         userid TEXT,
         phone TEXT,
         room_no TEXT,
-        year INTEGER,
+        year INTEGER,i8m
         study_time TEXT,
-        smoking TEXT,
+        dietary TEXT,
         cleanliness TEXT
     )
     """)

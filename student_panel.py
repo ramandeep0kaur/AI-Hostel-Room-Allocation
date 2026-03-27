@@ -312,14 +312,14 @@ def open_student(root, username, from_page=None):
             width=20
         ).pack(pady=5)
 
-        # Smoking
-        tk.Label(card, text="Smoking", bg="white").pack()
-        smoke_var = tk.StringVar()
+       # Dietary  
+        tk.Label(card, text="Dietary ", bg="white").pack()
+        diet_var = tk.StringVar()
 
         ttk.Combobox(
             card,
-            textvariable=smoke_var,
-            values=["Yes","No"],
+            textvariable=diet_var,
+            values=["Vegetarian", "Non-Vegetarian", "Vegan"],
             width=20
         ).pack(pady=5)
 
@@ -356,7 +356,7 @@ def open_student(root, username, from_page=None):
             """,
             (
                 study_var.get(),
-                smoke_var.get(),
+                diet_var.get(),
                 clean_var.get(),
                 year_var.get(),
                 username
