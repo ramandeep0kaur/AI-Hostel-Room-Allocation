@@ -204,10 +204,14 @@ def login_screen(root):
         dep_label.pack(anchor="w")
         dep_entry.pack(pady=5, ipady=6)
         
-        tk.Label(card, text="Year", bg="#FFE4F1").pack(anchor="w")
+        year_label = tk.Label(card, text="Year", bg="#FFE4F1").pack(anchor="w")
         year_var = tk.StringVar()
-        ttk.Combobox( card, textvariable=year_var, values=["1","2","3","4"], width=28,
-                     font=("Arial",12)).pack(pady=5, ipady=4)
+        ttk.Combobox( card, textvariable=year_var, values=["1","2","3","4","5"], width=28,
+                     font=("Arial",12))
+        
+        year_label.pack(anchor = "w")
+        year_combo.pack(pady = 5, ipady = 4)
+        
         
         id_label = tk.Label(card, text="Roll No", bg="#FFE4F1")
         id_entry = tk.Entry(card, width=30, font=("Arial", 12))
@@ -228,7 +232,7 @@ def login_screen(root):
         role_frame.pack()
 
         def update_fields():
-
+    
             if role_var.get() == "Warden":
 
                 dep_label.pack_forget()
